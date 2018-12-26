@@ -1,28 +1,33 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Header from "./components/header/header";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Topic from "./pages/Topic/Topic";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <div>
+      <HeaderWrapper />
+
+      <Route exact path="/" component={HomeWrapper} />
+      <Route path="/about" component={AboutWrapper} />
+      <Route path="/topics" component={TopicWrapper} />
+    </div>
+  </Router>
+);
+
+const HomeWrapper = () => (
+  <Home />
+);
+const AboutWrapper = () => (
+  <About />
+);
+const TopicWrapper = () => (
+  <Topic />
+);
+const HeaderWrapper = () => (
+  <Header />
+)
 
 export default App;
