@@ -1,17 +1,26 @@
 import React, {Component} from 'react';
-import {Button} from 'antd'
+import {withRouter} from 'react-router-dom';
+import PropTypes from 'prop-types';
+import Header from '../../components/header/header';
+import './Home.less';
 
 class Home extends Component {
+  static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  };
   render() {
     return(
-      <div className="homePage">
-        首页数据
-        <div>
-          <Button type="danger">按钮颜色是什么</Button>
+      <div>
+        <Header activeIndex={this.props.location.pathname} />
+        <div className="homePage">
+          首页数据{this.props.location.pathname}
         </div>
       </div>
+      
     );
   }
 }
 
-export default Home;
+export default withRouter(Home);

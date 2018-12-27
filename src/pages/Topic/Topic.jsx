@@ -1,30 +1,24 @@
 import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom';
+import PropTypes from 'prop-types';
+import Header from '../../components/header/header';
+import './Topic.less';
 
 class Topic extends Component {
+  static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  };
   render() {
     return(
       <div>
-        <Aside />
-        <Content />
-        <Main />
+        <Header activeIndex={this.props.location.pathname} />
+        <div className="topicPage">
+          话题{this.props.location.pathname}
+        </div>
       </div>
     );
   }
 }
-const Aside = (props) => (
-  <div className="topicPage">
-    话题页面的侧边{props.name1}
-  </div>
-);
-const Content = (props) => (
-  <div className="topicPage">
-    话题页面的内容{props.name2}
-  </div>
-);
-const Main = (props) => (
-  <div className="topicPage">
-    话题页面的主要{props.name3}
-  </div>
-);
-
-export default Topic;
+export default withRouter(Topic);

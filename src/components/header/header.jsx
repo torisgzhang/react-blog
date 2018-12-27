@@ -6,17 +6,14 @@ import './header.less';
 class Header extends Component {
   constructor (props) {
       super(props);
-      console.log(this.props);
       this.state = {
-        current: 'home',
+        current: this.props.activeIndex,
       }
   }
-  
   handleClick = (e) => {
-    console.log('click ', e);
     this.setState({
       current: e.key,
-    }, () => console.log('setState finished'));
+    });
   }
 
   render() {
@@ -38,14 +35,14 @@ class Header extends Component {
               selectedKeys={[this.state.current]}
               mode="horizontal"
             >
-              <Menu.Item key="home">
+              <Menu.Item key="/">
                 <Link to="/">首页</Link>
               </Menu.Item>
-              <Menu.Item key="about">
-                <Link to="/about">平台项目</Link>
+              <Menu.Item key="/about">
+                <Link to="/about">关于我</Link>
               </Menu.Item>
-              <Menu.Item key="topics">
-                <Link to="/topics">设计师</Link>
+              <Menu.Item key="/topics">
+                <Link to="/topics">话题</Link>
               </Menu.Item>
             </Menu>
           </div>
