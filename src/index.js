@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './common/style/base.css';
+import './common/style/less-variable.less';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

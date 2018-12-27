@@ -5,14 +5,20 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Topic from "./pages/Topic/Topic";
 
+const typeArea = {
+    width: 1090,
+    margin: '0 auto',
+}
 const App = () => (
+  
   <Router>
     <div>
       <HeaderWrapper />
-
-      <Route exact path="/" component={HomeWrapper} />
-      <Route path="/about" component={AboutWrapper} />
-      <Route path="/topics" component={TopicWrapper} />
+      <div style={ typeArea }>
+        <Route exact path="/" component={HomeWrapper} />
+        <Route path="/about" component={AboutWrapper} />
+        <Route path="/topics" component={TopicWrapper} />
+      </div>
     </div>
   </Router>
 );
@@ -29,5 +35,4 @@ const TopicWrapper = () => (
 const HeaderWrapper = () => (
   <Header />
 )
-
 export default App;

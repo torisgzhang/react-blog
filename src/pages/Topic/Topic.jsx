@@ -11,24 +11,19 @@ class Topic extends Component {
     );
   }
 }
-const test = {
-  name1: '张三',
-  name2: '李四',
-  name3: '王二'
-}
-const Aside = (test) => (
+const Aside = (props) => (
   <div className="topicPage">
-    话题页面的侧边{test.name1}
+    话题页面的侧边{props.name1}
   </div>
 );
-const Content = (test) => (
+const Content = (props) => (
   <div className="topicPage">
-    话题页面的内容{test.name2}
+    话题页面的内容{props.name2}
   </div>
 );
-const Main = (test) => (
+const Main = (props) => (
   <div className="topicPage">
-    话题页面的主要{test.name3}
+    话题页面的主要{props.name3}
   </div>
 );
 

@@ -1,9 +1,65 @@
 .header-wrapper {
-  width: 1090px;
-  height: 200px;
-  margin: 0 auto;
-  background: #faad14;
+  width: 100%;
+  height: 236px;
 }
-.header-wrapper .slider-two {
-  background: #faad14;
+.header-wrapper .header-wrapper_top {
+  width: 100%;
+  height: 36px;
+  background: #333;
+}
+.header-wrapper .header-wrapper_top ._top-content {
+  width: 1090px;
+  margin: 0 auto;
+  line-height: 36px;
+  color: #ccc;
+  font-size: 12px;
+}
+.header-wrapper .header-wrapper_con {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+}
+.header-wrapper .header-wrapper_con ._con-content {
+  width: 1090px;
+  height: 153px;
+  background: red;
+  padding-top: 42px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.header-wrapper .header-wrapper_con ._con-content .logo {
+  width: 200px;
+  height: 73px;
+  margin: 0 auto;
+  background: #333;
+}
+.header-wrapper .header-wrapper_con ._con-nav {
+  width: 1090px;
+  margin: 0 auto;
+  height: 50px;
+}
+.header-wrapper .header-wrapper_con ._con-nav a {
+  color: #333;
+}
+.header-wrapper .header-wrapper_con ._con-nav .ant-menu-horizontal {
+  border: none;
+}
+.header-wrapper .header-wrapper_con ._con-nav .ant-menu-horizontal > .ant-menu-item:hover,
+.header-wrapper .header-wrapper_con ._con-nav .ant-menu-horizontal > .ant-menu-submenu:hover,
+.header-wrapper .header-wrapper_con ._con-nav .ant-menu-horizontal > .ant-menu-item-active,
+.header-wrapper .header-wrapper_con ._con-nav .ant-menu-horizontal > .ant-menu-submenu-active,
+.header-wrapper .header-wrapper_con ._con-nav .ant-menu-horizontal > .ant-menu-item-open,
+.header-wrapper .header-wrapper_con ._con-nav .ant-menu-horizontal > .ant-menu-submenu-open,
+.header-wrapper .header-wrapper_con ._con-nav .ant-menu-horizontal > .ant-menu-item-selected,
+.header-wrapper .header-wrapper_con ._con-nav .ant-menu-horizontal > .ant-menu-submenu-selected {
+  border: none;
+  border-bottom: 2px solid #fff;
+}
+.header-wrapper .header-wrapper_con ._con-nav .ant-menu-item-active > a {
+  color: #333;
+}
+.header-wrapper .header-wrapper_con ._con-nav .ant-menu-item-selected > a {
+  position: relative;
+  top: 2px;
+  border-bottom: 2px solid #58a966;
 }
